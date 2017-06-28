@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
         <div> 
-            Hello World!
+            Hello Everybody!
         </div>
         )
     }
@@ -21,5 +21,5 @@ class App extends React.Component {
 // component invocation
 ReactDOM.render(
     <App />,
-    document.getElementById('app');
+    document.getElementById('app')
 );
