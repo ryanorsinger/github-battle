@@ -3,15 +3,15 @@ var ReactDOM = require('react-dom');
 require('./index.css');
 
 // Components have
-// UI
-// state
-// lifecycle event
+// UI, always UI
+// many have state
+// often some kind of lifecycle event
 
 // component definition
 class App extends React.Component {
     render() {
         return (
-        <div> 
+        <div>
             Hello Everybody!
         </div>
         )
