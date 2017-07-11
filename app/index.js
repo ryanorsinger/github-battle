@@ -4,11 +4,6 @@ var PropTypes = require('prop-types');
 
 require('./index.css');
 
-const USER_DATA = {
-    img: 'https://avatars3.githubusercontent.com/u/5657581?v=3&s=460',
-    name: 'Ryan Orsinger',
-    username: 'ryanorsinger'
-}
 // Components have
 // UI, always UI
 // many have state
@@ -35,15 +30,26 @@ class Badge extends React.Component {
     render() {
         return (
             <div>
-               <Avatar img={this.props.user.img} />
-               <Label name={this.props.user.name} />
-               <ScreenName username={this.props.user.username} />
+               <Avatar img={this.props.img} />
+               <Label name={this.props.name} />
+               <ScreenName username={this.props.username} />
             </div>
         )
     }
 }
 
+Badge.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+}
+
+
 ReactDOM.render(
-    <Badge user={USER_DATA}/>,
+    <Badge
+        name='Ryan Orsinger'
+        username='ryanorsinger'
+        img='https://avatars3.githubusercontent.com/u/5657581?v=3&s=460'
+    />,
     document.getElementById('app')
 );
