@@ -1,5 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var PropTypes = require('prop-types');
+
 require('./index.css');
 
 const USER_DATA = {
@@ -14,7 +16,7 @@ const USER_DATA = {
 
 class Avatar extends React.Component {
     render() {
-        return <img src={this.props.img} />
+        return <img src={this.props.img} alt='avatar' />
     }
 }
 class Label extends React.Component {
